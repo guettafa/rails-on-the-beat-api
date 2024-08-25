@@ -3,7 +3,7 @@ class Api::V1::SoundsController < ApplicationController
 
   # GET /sounds
   def index
-    @sounds = Sound.all
+    @sounds = Sound.are_visible
 
     render json: @sounds
   end

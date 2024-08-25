@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  
   # App routes
   namespace :api do
     namespace :v1 do
-      resources :artists, :sounds
+      resources :artists
+      resources :sounds
     end
   end
 
