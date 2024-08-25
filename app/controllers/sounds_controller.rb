@@ -46,6 +46,6 @@ class Api::V1::SoundsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def sound_params
-      params.require(:sound).permit(:title, :description, :artist_id, :audio)
+      params.require(:sound).permit(:title, :description, :artist_id, :audio, :artwork, :type, :visibility)
     end
 end

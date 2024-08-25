@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   # App routes
   namespace :api do
     namespace :v1 do
