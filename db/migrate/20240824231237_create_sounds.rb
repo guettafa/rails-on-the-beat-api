@@ -3,7 +3,7 @@ class CreateSounds < ActiveRecord::Migration[7.2]
     create_table :sounds do |t|
       t.string :title
       t.string :description
-      t.boolean :hidden
+      t.boolean :is_visible
       t.integer :genre
       t.references :artist
 

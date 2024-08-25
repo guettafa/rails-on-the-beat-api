@@ -21,7 +21,7 @@ end
     artist_id: rand(1..5),
     audio: nil,
     genre: [ :electronic, :pop, :digicore, :jazz ].shuffle.first,
-    hidden: rand(2) == 1,
+    is_visible: rand(2) == 1,
     artwork: File.open(URI('https://loremflickr.com/500/500/breakcore').open)
   )
 end

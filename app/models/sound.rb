@@ -1,5 +1,5 @@
 class Sound < ApplicationRecord
-  scope :are_visible, -> { where(hidden: false) }
+  scope :are_visible, -> { where(is_visible: true) }
   scope :by_genre, ->(genre) { where(genre: genre) }
 
   enum genre: {
