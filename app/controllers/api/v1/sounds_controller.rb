@@ -3,7 +3,7 @@ class Api::V1::SoundsController < ApplicationController
 
   # GET /sounds
   def index
-    @sounds = Sound.are_visible.older_to_recent
+    @sounds = Sound.are_visible.recent_to_older
 
     render json: @sounds
   end
