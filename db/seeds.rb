@@ -19,7 +19,7 @@ end
     title: Faker::Music.band,
     description: "A music",
     artist_id: rand(1..5),
-    audio: nil,
+    audio: File.open(URI('https://www2.cs.uic.edu/~i101/SoundFiles/CantinaBand60.wav').open),
     genre: [ :electronic, :pop, :digicore, :jazz ].shuffle.first,
     is_visible: rand(2) == 1,
     artwork: File.open(URI('https://loremflickr.com/500/500/breakcore').open)
