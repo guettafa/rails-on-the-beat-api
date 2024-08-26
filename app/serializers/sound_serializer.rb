@@ -1,5 +1,5 @@
 class SoundSerializer < ActiveModel::Serializer
-  attributes :id, :title, :genre, :artwork_link, :is_visible, :audio_link
+  attributes :id, :title, :genre, :artwork_link, :is_visible, :audio_link, :created_at
   belongs_to :artist
 
   def artwork_link
