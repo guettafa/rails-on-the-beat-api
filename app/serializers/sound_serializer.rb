@@ -3,10 +3,16 @@ class SoundSerializer < ActiveModel::Serializer
   belongs_to :artist
 
   def artwork_link
-    Rails.application.routes.url_helpers.url_for(object.artwork)
+    generate_url(object.artwork)
   end
 
   def audio_link
-    Rails.application.routes.url_helpers.url_for(object.audio)
+    generate_url(object.audio)
   end
+
+  private
+
+    def generate_url(blob)
+      Rails.application.routes.url_helpers.url_for(blob)
+    end
 end
