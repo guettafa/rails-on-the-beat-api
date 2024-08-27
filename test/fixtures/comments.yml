@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+with_content:
+  content: "Good music"
+  sound_id: 1
+  artist_id: 1
+
+without_content:
+  content: 
+  sound_id: 1
+  artist_id: 1

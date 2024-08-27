@@ -7,6 +7,7 @@ class Sound < ApplicationRecord
   }
 
   belongs_to :artist
+  has_many :comments
 
   has_one_attached :audio
   has_one_attached :artwork

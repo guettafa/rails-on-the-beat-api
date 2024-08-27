@@ -25,3 +25,12 @@ end
     artwork: File.open(URI('https://loremflickr.com/500/500/breakcore').open)
   )
 end
+
+# Mocking comments
+10.times do
+  Comment.create!(
+    content: Faker::Markdown.emphasis,
+    sound_id: rand(1..20),
+    artist_id: rand(1..5)
+  )
+end
