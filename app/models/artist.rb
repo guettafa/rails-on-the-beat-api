@@ -1,6 +1,8 @@
 class Artist < ApplicationRecord
-  has_many :sounds, dependent: :destroy
-  has_many :comments, dependent: :destroy
+  with_options dependent: :destroy do
+    has_many :sounds
+    has_many :comments
+  end
 
   has_one_attached :avatar
 
